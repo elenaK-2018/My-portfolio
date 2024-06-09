@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Caviar-Dreams";
+  src: local("Caviar-Dreams"), local("Caviar Dreams"),
+      url("../fonts/caviar-dreams.woff2") format("woff2"),
+      url("../fonts/caviar-dreams/caviar-dreams.ttf") format("truetype"),
+      url("../fonts/caviar-dreams.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+

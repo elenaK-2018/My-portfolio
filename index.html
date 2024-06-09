@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/caviar-dreams.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/caviar-dreams.woff" as="font" type="font/woff" crossorigin>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-3.7.1.min.js" defer></script>
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body class="page">
+  <header class="page__header header">
+    <div class="container header__container">
+      <img
+        class="header__logo"
+        src="img/logo.png"
+        alt="Логотип Елены Куделько"
+      />
+
+      <address class="header__contacts contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <p class="contacts__head">Телефон</p>
+            <a href="tel:+375293424683" class="contact__link" target="_blank"
+              >+375(29)342-46-83</a
+            >
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__head">Email</p>
+            <a
+              href="mailto:Kudmax-2005@mail.ru"
+              class="contact__link"
+              target="_blank"
+              >Kudmax-2005@mail.ru</a
+            >
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__head contacts__head_social">Соц.сети</p>
+            <ul class="contacts__social-list">
+              <li class="contacts__social-item">
+                <a
+                  href="#"
+                  class="contacts__social-link contacts__social-link_viber"
+                  target="_blank"
+                ></a>
+              </li>
+              <li class="contacts__social-item">
+                <a
+                  href="#"
+                  class="contacts__social-link contacts__social-link_instagram"
+                  target="_blank"
+                ></a>
+              </li>
+              <li class="contacts__social-item">
+                <a
+                  href="#"
+                  class="contacts__social-link contacts__social-link_facebook"
+                  target="_blank"
+                ></a>
+              </li>
+              <li class="contacts__social-item">
+                <a
+                  href="#"
+                  class="contacts__social-link contacts__social-link_telegram"
+                  target="_blank"
+                ></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </address>
+
+      <button class="header__contacts-burger"></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="present">
+      <div class="container present__container">
+        <img
+          src="img/photo.jpg"
+          alt="Фотография Елены Куделько"
+          class="present__photo"
+        />
+        <div class="present__content">
+          <div class="present__group-title">
+            <h1 class="present__title">Елена Куделько</h1>
+            <h2 class="present__subtitle">Разработчик сайтов</h2>
+          </div>
+
+          <p class="present__description">
+            Меня зовут Елена Куделько, я начинающий разработчик сайтов.
+          </p>
+          <button class="present__order-btn">Заказать</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantage">
+      <div class="container">
+        <h2 class="advantage__title">Почему я</h2>
+        <ul class="advantage__list">
+          <li class="advantage__item advantage__item_stack">
+            HTML, CSS, JavaScript, jQuery
+          </li>
+          <li class="advantage__item advantage__item_program">
+            Figma, Pixso, Photoshop
+          </li>
+          <li class="advantage__item advantage__item_adapt">
+            Адаптивная, доступная и кроссбраузерная вёрстка
+          </li>
+          <li class="advantage__item advantage__item_clear">
+            Чистый валидный код
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <div class="container">
+        <h2 class="portfolio__title">Портфолио</h2>
+        <div class="potfolio__slider swiper">
+          <ul class="portfolio__list swiper-wrapper">
+            <li class="portfolio__item swiper-slide">
+              <article class="card">
+                <a href="https://elenak-2018.github.io/color-switcher/" class="card__link" target="_blank">
+                  <img
+                  src="img/Screenshot_1.png"
+                  alt="Генератор цвета- скриншот"
+                  class="card__picture"/>
+                  <h3 class="card__title">Генератор цвета</h3>
+                </a>             
+              </article>
+            </li>
+
+            <li class="portfolio__item swiper-slide">
+              <article class="card">
+                <a href="https://elenak-2018.github.io/calculator/" class="card__link" target="_blank">
+                  <img
+                  src="img/Screenshot_2.png"
+                  alt="Калькулятор- скриншот"
+                  class="card__picture"/>
+                  <h3 class="card__title">Калькулятор</h3>
+                </a>       
+              </article>
+            </li>
+
+            <li class="portfolio__item swiper-slide">
+              <article class="card">
+                <a href="https://elenak-2018.github.io/burgers/" class="card__link" target="_blank">
+                  <img
+                  src="img/Screenshot_3.png"
+                  alt="Сочные бургеры- скриншот"
+                  class="card__picture"/>
+                  <h3 class="card__title">Сочные бургеры</h3>
+                </a>       
+              </article>
+            </li>
+
+            <li class="portfolio__item swiper-slide">
+              <article class="card">
+                <a href="https://elenak-2018.github.io/barbershop/" class="card__link" target="_blank">
+                  <img
+                  src="img/Screenshot_4.png"
+                  alt="Барбершоп"
+                  class="card__picture"/>
+                  <h3 class="card__title">Барбершоп</h3>
+                </a>       
+              </article>
+            </li>
+
+            <li class="portfolio__item swiper-slide">
+              <article class="card">
+                <a href="https://elenak-2018.github.io/Electric-scooters/" class="card__link" target="_blank">
+                  <img
+                  src="img/Screenshot_5.png"
+                  alt="Электросамокаты- скриншот"
+                  class="card__picture"/>
+                  <h3 class="card__title">Электросамокаты</h3>
+                </a>       
+              </article>
+            </li>
+          </ul>
+
+          <button class="portfolio__arrow portfolio__arrow_left"></button>
+          <button class="portfolio__arrow portfolio__arrow_right"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="page__overlay page__overlay_modal">
+    <div class="modal">
+      <h2 class="modal__title">Заполните форму и я с вами свяжусь</h2>
+
+      <form class="modal__form callback">
+        <fieldset class="callback__group">
+          <legend class="visually-hidden">Личные данные</legend>
+          <label class="callback__label">
+            <span class="callback__label-text">ФИО</span>
+            <input
+              type="text"
+              class="callback__input"
+              name="bio"
+              placeholder="Введите ваше имя"
+            />
+          </label>
+
+          <label class="callback__label">
+            <span class="callback__label-text">Телефон</span>
+            <input
+              type="number"
+              class="callback__input"
+              name="phone"
+              placeholder="Введите ваш номер телефона"
+            />
+          </label>
+        </fieldset>
+
+        <fieldset class="callback__group connect">
+          <legend class="connect__title">Где удобнее связаться?</legend>
+
+          <label class="connect__label">
+            <input
+              class="connect__radio"
+              type="radio"
+              name="connect"
+              value="telegram"
+            />
+            <span class="connect__text">Телеграмм</span>
+          </label>
+
+          <label class="connect__label">
+            <input
+              class="connect__radio"
+              type="radio"
+              name="connect"
+              value="call"
+            />
+            <span class="connect__text">Позвонить</span>
+          </label>
+
+          <label class="connect__label">
+            <input
+              class="connect__radio"
+              type="radio"
+              name="connect"
+              value="viber"
+            />
+            <span class="connect__text">Viber</span>
+          </label>
+        </fieldset>
+
+        <button class="callback__btn" type="submit">Заказать</button>
+      </form>
+
+      <button class="modal__close">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="29.1681"
+            height="1.94454"
+            rx="0.972271"
+            transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 20.625)"
+            fill="#282626"
+          />
+          <rect
+            width="29.1681"
+            height="1.94454"
+            rx="0.972271"
+            transform="matrix(0.707106 0.707107 -0.707106 0.707107 1.375 0)"
+            fill="#282626"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+</body>
+</html>

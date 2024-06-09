@@ -1,0 +1,125 @@
+.portfolio__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.card {
+  box-sizing: border-box;
+  min-width: 252px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px;
+  align-items: center;
+}
+
+.card__picture {
+  align-self: center;
+  width: 155px;
+  height: 92px;
+  padding: 5px 18px 12px;
+  background-image: url("../img/macbook.svg");
+  background-size: cover;
+  margin-bottom: 8px;
+}
+
+.card__title {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+}
+
+.portfolio__slider {
+  position: relative;
+  max-width: 290px;
+  margin: 0 auto;
+}
+
+.portfolio__arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: 5;
+}
+
+.portfolio__arrow_left {
+  left: 0;
+}
+
+.portfolio__arrow_right {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.portfolio__arrow_disable {
+  opacity: 0.3;
+  pointer-events: none; /*неактивные кнопки*/
+}
+
+@media (min-width: 480px) {
+  .portfolio__title {
+    font-size: 40px;
+  }
+
+  .card__picture {
+    width: 213px;
+    height: 126px;
+    padding: 5px 25px 14px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 550px) {
+  .card__picture {
+    width: 313px;
+    height: 177px;
+    padding: 11px 35px 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card__title {
+    font-size: 18px;
+  }
+
+  .card__picture {
+    width: 413px;
+    height: 233px;
+    padding: 18px 47px 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card__picture {
+    width: 497px;
+    height: 285px;
+    padding: 18px 60px 38px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card__title {
+    font-size: 20px;
+  }
+
+  .portfolio__title {
+    font-size: 50px;
+  }
+
+  .portfolio__arrow {
+    width: 40px;
+    height: 40px;
+  }
+}
