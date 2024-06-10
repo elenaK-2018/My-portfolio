@@ -1,9 +1,9 @@
 new Swiper('.swiper', {
-    navigation: {
-        nextEl: '.portfolio__arrow_right',
-        prevEl: '.portfolio__arrow_left',
-        disabledClass: 'portfolio__arrow_disable',
-      },
+  navigation: {
+    nextEl: '.portfolio__arrow_right',
+    prevEl: '.portfolio__arrow_left',
+    disabledClass: 'portfolio__arrow_disable',
+  },
 })
 
 $('.header__contacts-burger').click(() => {

@@ -2,7 +2,7 @@
   position: relative;
   border-radius: 14px;
   border: 1px solid #646464;
-  background-color: var( --color-text);
+  background-color: var(--color-text);
   margin: auto;
   color: #20212b;
   padding: 40px 10px;
@@ -71,22 +71,23 @@
 .callback__btn {
   display: block;
   margin: 0 auto;
-  padding: 16px 60px;
+  padding: 16px 75px;
   border-radius: 4px;
-  background-color: #e87c40;
-  color: #ffffff;
+  background-color: var(--color-button);
+  color:#fff;
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 
 .callback__btn:hover {
-  background-color: #f79e6f;
+  background-color: #ed905e;
 }
 
 .callback__btn:active {
-  background-color: #cc5717;
+  background-color: #a94e1d;
 }
 
 .connect__radio {
@@ -98,6 +99,10 @@
     padding: 70px 85px;
     min-width: 600px;
   }
-  
+
+  .callback__btn {
+    padding: 18px 95px;
+    font-size: 20px;
+  }  
 }
 
