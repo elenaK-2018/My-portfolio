@@ -36,7 +36,7 @@
 
 .portfolio__slider {
   position: relative;
-  max-width: 290px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -44,10 +44,9 @@
   display: block;
   position: absolute;
   top: 50%;
-  /* transform: translateY(-50%); */
+  transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  background-image: url("../img/left.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -56,11 +55,12 @@
 
 .portfolio__arrow_left {
   left: 0;
+  background-image: url("../img/left.svg");
 }
 
 .portfolio__arrow_right {
   right: 0;
-  transform: rotate(180deg);
+  background-image: url("../img/right.svg");
 }
 
 .portfolio__arrow_disable {
