@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery-3.7.1.min.js" defer></script>
   <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/inputmask.min.js" defer></script>
   <script src="js/script.js" defer></script>
 </head>
 <body class="page">
@@ -25,6 +26,7 @@
         class="header__logo"
         src="img/logo.png"
         alt="Логотип Елены Куделько"
+        aria-label="Логотип Елены Куделько"
       />
 
       <address class="header__contacts contacts">
@@ -49,9 +51,10 @@
             <ul class="contacts__social-list">
               <li class="contacts__social-item">
                 <a
-                  href="#"
+                  href="https://tinyurl.com/mu3r2yhv"
                   class="contacts__social-link contacts__social-link_viber"
                   target="_blank"
+                  aria-label="Ссылка, которая ведёт на вайбер"
                 ></a>
               </li>
               <li class="contacts__social-item">
@@ -59,20 +62,23 @@
                   href="#"
                   class="contacts__social-link contacts__social-link_instagram"
                   target="_blank"
+                  aria-label="Ссылка, которая ведёт в инстаграм"
                 ></a>
               </li>
               <li class="contacts__social-item">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/profile.php?id=100083957329792"
                   class="contacts__social-link contacts__social-link_facebook"
                   target="_blank"
+                  aria-label="Ссылка, которая ведёт в фейсбук"
                 ></a>
               </li>
               <li class="contacts__social-item">
                 <a
-                  href="#"
+                  href="https://t.me/ElenaKude"
                   class="contacts__social-link contacts__social-link_telegram"
                   target="_blank"
+                  aria-label="Ссылка, которая ведёт в телеграм"
                 ></a>
               </li>
             </ul>
@@ -80,7 +86,7 @@
         </ul>
       </address>
 
-      <button class="header__contacts-burger"></button>
+      <button class="header__contacts-burger" type="button" aria-haspopup="menu" aria-label="Кнопка входа в меню и закрытия меню"></button>
     </div>
   </header>
 
@@ -91,6 +97,9 @@
           src="img/photo.jpg"
           alt="Фотография Елены Куделько"
           class="present__photo"
+          loading="lazy"
+          width="445px"
+          height="576px"
         />
         <div class="present__content">
           <div class="present__group-title">
@@ -101,7 +110,7 @@
           <p class="present__description">
             Меня зовут Елена Куделько, я начинающий разработчик сайтов.
           </p>
-          <button class="present__order-btn">Заказать</button>
+          <button class="present__order-btn" type="button" aria-label="Кнопка вызова модального окна" aria-haspopup="dialog">Заказать</button>
         </div>
       </div>
     </section>
@@ -111,7 +120,7 @@
         <h2 class="advantage__title">Почему я</h2>
         <ul class="advantage__list">
           <li class="advantage__item advantage__item_stack">
-            HTML, CSS, JavaScript, jQuery
+            HTML, CSS, JavaScript, SCSS, jQuery, Git
           </li>
           <li class="advantage__item advantage__item_program">
             Figma, Pixso, Photoshop
@@ -120,7 +129,7 @@
             Адаптивная, доступная и кроссбраузерная вёрстка
           </li>
           <li class="advantage__item advantage__item_clear">
-            Чистый валидный код
+            Чистый валидный код, БЭM
           </li>
         </ul>
       </div>
@@ -133,23 +142,74 @@
           <ul class="portfolio__list swiper-wrapper">
             <li class="portfolio__item swiper-slide">
               <article class="card">
-                <a href="https://elenak-2018.github.io/color-switcher/" class="card__link" target="_blank">
+                <a href="https://elenak-2018.github.io/Go/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Игровой клуб Go">
                   <img
-                  src="img/Screenshot_1.png"
-                  alt="Генератор цвета- скриншот"
-                  class="card__picture"/>
-                  <h3 class="card__title">Генератор цвета</h3>
-                </a>             
+                  src="img/Screenshot_3.png"
+                  alt="Игровой клуб GO - скриншот"
+                  class="card__picture"
+                  loading="lazy"
+                  width="377px"
+                  height="229px"/>
+                  <h3 class="card__title">Игровой клуб</h3>
+                </a>       
               </article>
             </li>
 
             <li class="portfolio__item swiper-slide">
               <article class="card">
-                <a href="https://elenak-2018.github.io/calculator/" class="card__link" target="_blank">
+                <a href="https://elenak-2018.github.io/Friendly-House/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Питомник для собак Friendly House">
+                  <img
+                  src="img/Screenshot_4.png"
+                  alt="Питомник для собак Дружелюбный дом - скриншот"
+                  class="card__picture"
+                  loading="lazy"
+                  width="377px"
+                  height="229px"/>
+                  <h3 class="card__title">Питомник для собак</h3>
+                </a>       
+              </article>
+            </li>
+
+            <li class="portfolio__item swiper-slide">
+              <article class="card">
+                <a href="https://elenak-2018.github.io/Building-construction/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Строительная компания">
+                  <img
+                  src="img/Screenshot_6.png"
+                  alt="Сайт строительной компании - скриншот"
+                  class="card__picture"
+                  loading="lazy"
+                  width="377px"
+                  height="229px"/>
+                  <h3 class="card__title">Строительная компания</h3>
+                </a>       
+              </article>
+            </li>
+
+            <li class="portfolio__item swiper-slide">
+              <article class="card">
+                <a href="https://elenak-2018.github.io/Electric-scooters/" class="card__link" target="_blank" aria-label="Ссылка на гитхаб проекта Электросамокаты">
+                  <img
+                  src="img/Screenshot_5.png"
+                  alt="Электросамокаты- скриншот"
+                  class="card__picture"
+                  loading="lazy"
+                  width="377px"
+                  height="229px"/>
+                  <h3 class="card__title">Электросамокаты</h3>
+                </a>       
+              </article>
+            </li>
+
+            <li class="portfolio__item swiper-slide">
+              <article class="card">
+                <a href="https://elenak-2018.github.io/calculator/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Калькулятор">
                   <img
                   src="img/Screenshot_2.png"
-                  alt="Калькулятор- скриншот"
-                  class="card__picture"/>
+                  alt="Калькулятор-скриншот"
+                  class="card__picture"
+                  loading="lazy"
+                  width="377px"
+                  height="229px"/>
                   <h3 class="card__title">Калькулятор</h3>
                 </a>       
               </article>
@@ -157,37 +217,16 @@
 
             <li class="portfolio__item swiper-slide">
               <article class="card">
-                <a href="https://elenak-2018.github.io/burgers/" class="card__link" target="_blank">
+                <a href="https://elenak-2018.github.io/color-switcher/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Генератор цвета">
                   <img
-                  src="img/Screenshot_3.png"
-                  alt="Сочные бургеры- скриншот"
-                  class="card__picture"/>
-                  <h3 class="card__title">Сочные бургеры</h3>
-                </a>       
-              </article>
-            </li>
-
-            <li class="portfolio__item swiper-slide">
-              <article class="card">
-                <a href="https://elenak-2018.github.io/barbershop/" class="card__link" target="_blank">
-                  <img
-                  src="img/Screenshot_4.png"
-                  alt="Барбершоп"
-                  class="card__picture"/>
-                  <h3 class="card__title">Барбершоп</h3>
-                </a>       
-              </article>
-            </li>
-
-            <li class="portfolio__item swiper-slide">
-              <article class="card">
-                <a href="https://elenak-2018.github.io/Electric-scooters/" class="card__link" target="_blank">
-                  <img
-                  src="img/Screenshot_5.png"
-                  alt="Электросамокаты- скриншот"
-                  class="card__picture"/>
-                  <h3 class="card__title">Электросамокаты</h3>
-                </a>       
+                  src="img/Screenshot_1.png"
+                  alt="Генератор цвета- скриншот"
+                  class="card__picture"
+                  loading="lazy"
+                  width="377px"
+                  height="229px"/>
+                  <h3 class="card__title">Генератор цвета</h3>
+                </a>             
               </article>
             </li>
           </ul>
@@ -203,16 +242,17 @@
     <div class="modal">
       <h2 class="modal__title">Заполните форму и я с вами свяжусь</h2>
 
-      <form class="modal__form callback">
+      <form class="modal__form callback" action="https://jsonplaceholder.typicode.com/posts" method="POST">
         <fieldset class="callback__group">
           <legend class="visually-hidden">Личные данные</legend>
           <label class="callback__label">
             <span class="callback__label-text">ФИО</span>
             <input
               type="text"
-              class="callback__input"
+              class="callback__input callback__input_name"
               name="bio"
               placeholder="Введите ваше имя"
+              required
             />
           </label>
 
@@ -220,9 +260,10 @@
             <span class="callback__label-text">Телефон</span>
             <input
               type="number"
-              class="callback__input"
+              class="callback__input callback__input_tel"
               name="phone"
-              placeholder="Введите ваш номер телефона"
+              placeholder="+375(__)___-__-__"
+              required
             />
           </label>
         </fieldset>
@@ -261,7 +302,7 @@
           </label>
         </fieldset>
 
-        <button class="callback__btn" type="submit">Заказать</button>
+        <button class="callback__btn" type="submit" aria-haspopup="dialog" aria-label="Кнопка отправки данных разработчику">Заказать</button>
       </form>
 
       <button class="modal__close">

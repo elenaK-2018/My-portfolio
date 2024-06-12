@@ -103,6 +103,10 @@
   .callback__btn {
     padding: 18px 95px;
     font-size: 20px;
-  }  
+  }
+  
+  .callback__input {
+    font-size: 18px;
+  }
 }
 
