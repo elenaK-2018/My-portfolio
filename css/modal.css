@@ -7,6 +7,7 @@
   color: #20212b;
   padding: 40px 10px;
   min-width: 290px;
+  overflow: auto;
 }
 
 .modal__close {
@@ -92,6 +93,10 @@
 
 .connect__radio {
   margin-right: 15px;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 @media (min-width:768px) {

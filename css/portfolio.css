@@ -17,11 +17,16 @@
 }
 
 .card__picture {
-  align-self: center;
+  display: block;
+  margin: 0 auto;
   width: 155px;
   height: 92px;
   padding: 5px 18px 12px;
-  background-image: url("../img/macbook.svg");
+  background-image: image-set(
+    url("../img/macbook.avif"),
+    url("../img/macbook.webp"),
+    url("../img/macbook.svg") 
+  );
   background-size: cover;
   margin-bottom: 8px;
 }

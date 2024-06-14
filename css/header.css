@@ -44,6 +44,12 @@
 .contacts__link {
   font-size: 16px;
   line-height: 22px;
+  transition: 0.3s ease-in-out;
+}
+
+.contacts__link:hover {
+  box-shadow: 1px 1px 10px 5px;
+  transition: 0.3s ease-in-out;
 }
 
 .contacts__head_social {
@@ -68,6 +74,7 @@
   height: 26px;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
 }
 
 .contacts__social-link_viber {
@@ -86,11 +93,22 @@
   background-image: url("../img/telegram.svg");
 }
 
+.contacts__social-link:hover {
+  transform: scale(0.8);
+  box-shadow: 1px 1px 10px 5px;
+}
+
 .header__contacts-burger {
   display: block;
   width: 27px;
   height: 14px;
   background-image: url("../img/menu-burger.svg");
+}
+
+.header__contacts-burger:hover {
+  transform: scale(1.2);
+  box-shadow: 1px 1px 10px 5px rgb(247, 232, 234);
+  color: var( --color-menu);
 }
 
 @media (min-width: 768px) {

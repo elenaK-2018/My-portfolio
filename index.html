@@ -95,13 +95,15 @@
   <main>
     <section class="present">
       <div class="container present__container">
-        <img
-          src="img/photo.jpg"
-          alt="Фотография Елены Куделько"
-          class="present__photo"
-          width="445"
-          height="576"
-        />
+        <picture>
+          <source media="(min-width:768px)" srcset="img/photo.avif" type="image/avif">
+          <source media="(min-width:768px)" srcset="img/photo.webp" type="image/webp">
+          <source media="(min-width:768px)" srcset="img/photo.jpg" type="image/jpg"/>
+          <source srcset="img/photo-mb.avif" type="image/avif">
+          <source srcset="img/photo-mb.webp" type="image/webp">
+          <img src="img/photo-mb.jpg" alt="Фотография Елены Куделько" class="present__photo" width="370" height="479"/>
+        </picture>
+        
         <div class="present__content">
           <div class="present__group-title">
             <h1 class="present__title">Елена Куделько</h1>
@@ -144,13 +146,11 @@
             <li class="portfolio__item swiper-slide">
               <article class="card">
                 <a href="https://elenak-2018.github.io/Go/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Игровой клуб Go">
-                  <img
-                  src="img/Screenshot_3.png"
-                  alt="Игровой клуб GO - скриншот"
-                  class="card__picture"
-                  loading="lazy"
-                  width="377"
-                  height="229"/>
+                  <picture>
+                    <source srcset="img/Screenshot_1.avif" type="image/avif">
+                    <source srcset="img/Screenshot_1.webp" type="image/webp">
+                    <img src="img/Screenshot_1.png" alt="Игровой клуб GO - скриншот" class="card__picture" loading="lazy" width="377" height="229"/>
+                  </picture>
                   <h3 class="card__title">Игровой клуб</h3>
                 </a>       
               </article>
@@ -159,13 +159,11 @@
             <li class="portfolio__item swiper-slide">
               <article class="card">
                 <a href="https://elenak-2018.github.io/Friendly-House/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Питомник для собак Friendly House">
-                  <img
-                  src="img/Screenshot_4.png"
-                  alt="Питомник для собак Дружелюбный дом - скриншот"
-                  class="card__picture"
-                  loading="lazy"
-                  width="377"
-                  height="229"/>
+                  <picture>
+                    <source srcset="img/Screenshot_2.avif" type="image/avif">
+                    <source srcset="img/Screenshot_2.webp" type="image/webp">
+                    <img src="img/Screenshot_2.png" alt="Питомник для собак Дружелюбный дом - скриншот" class="card__picture" loading="lazy" width="377" height="229"/>
+                  </picture>                  
                   <h3 class="card__title">Питомник для собак</h3>
                 </a>       
               </article>
@@ -174,13 +172,11 @@
             <li class="portfolio__item swiper-slide">
               <article class="card">
                 <a href="https://elenak-2018.github.io/Building-construction/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Строительная компания">
-                  <img
-                  src="img/Screenshot_6.png"
-                  alt="Сайт строительной компании - скриншот"
-                  class="card__picture"
-                  loading="lazy"
-                  width="377"
-                  height="229"/>
+                  <picture>
+                    <source srcset="img/Screenshot_3.avif" type="image/avif">
+                    <source srcset="img/Screenshot_3.webp" type="image/webp">
+                    <img src="img/Screenshot_3.png" alt="Сайт строительной компании - скриншот" class="card__picture" loading="lazy" width="377" height="229"/>
+                  </picture>   
                   <h3 class="card__title">Строительная компания</h3>
                 </a>       
               </article>
@@ -189,45 +185,13 @@
             <li class="portfolio__item swiper-slide">
               <article class="card">
                 <a href="https://elenak-2018.github.io/Electric-scooters/" class="card__link" target="_blank" aria-label="Ссылка на гитхаб проекта Электросамокаты">
-                  <img
-                  src="img/Screenshot_5.png"
-                  alt="Электросамокаты- скриншот"
-                  class="card__picture"
-                  loading="lazy"
-                  width="377"
-                  height="229"/>
+                  <picture>
+                    <source srcset="img/Screenshot_4.avif" type="image/avif">
+                    <source srcset="img/Screenshot_4.webp" type="image/webp">
+                    <img src="img/Screenshot_4.png" alt="Электросамокаты- скриншот" class="card__picture" loading="lazy" width="377" height="229"/>
+                  </picture>  
                   <h3 class="card__title">Электросамокаты</h3>
                 </a>       
-              </article>
-            </li>
-
-            <li class="portfolio__item swiper-slide">
-              <article class="card">
-                <a href="https://elenak-2018.github.io/calculator/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Калькулятор">
-                  <img
-                  src="img/Screenshot_2.png"
-                  alt="Калькулятор-скриншот"
-                  class="card__picture"
-                  loading="lazy"
-                  width="377"
-                  height="229"/>
-                  <h3 class="card__title">Калькулятор</h3>
-                </a>       
-              </article>
-            </li>
-
-            <li class="portfolio__item swiper-slide">
-              <article class="card">
-                <a href="https://elenak-2018.github.io/color-switcher/" class="card__link" target="_blank" aria-label="Ссылка на гит-хаб проекта Генератор цвета">
-                  <img
-                  src="img/Screenshot_1.png"
-                  alt="Генератор цвета- скриншот"
-                  class="card__picture"
-                  loading="lazy"
-                  width="377"
-                  height="229"/>
-                  <h3 class="card__title">Генератор цвета</h3>
-                </a>             
               </article>
             </li>
           </ul>
@@ -243,24 +207,25 @@
     <div class="modal">
       <h2 class="modal__title">Заполните форму и я с вами свяжусь</h2>
 
-      <form class="modal__form callback" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+      <form class="modal__form callback" action="https://jsonplaceholder.typicode.com/posts" method="post">
         <fieldset class="callback__group">
           <legend class="visually-hidden">Личные данные</legend>
           <label class="callback__label">
-            <span class="callback__label-text">ФИО</span>
+            <span class="callback__label-text">ФИО*</span>
             <input
               type="text"
               class="callback__input callback__input_name"
               name="bio"
               placeholder="Введите ваше имя"
+              autocomplete="off"
               required
             />
           </label>
 
           <label class="callback__label">
-            <span class="callback__label-text">Телефон</span>
+            <span class="callback__label-text">Телефон*</span>
             <input
-              type="number"
+              type="tel"
               class="callback__input callback__input_tel"
               name="phone"
               placeholder="+375(__)___-__-__"
@@ -275,9 +240,11 @@
           <label class="connect__label">
             <input
               class="connect__radio"
+              id="form-telegram"
               type="radio"
               name="connect"
               value="telegram"
+              checked
             />
             <span class="connect__text">Телеграмм</span>
           </label>
@@ -285,6 +252,7 @@
           <label class="connect__label">
             <input
               class="connect__radio"
+              id="form-phone"
               type="radio"
               name="connect"
               value="call"
@@ -295,6 +263,7 @@
           <label class="connect__label">
             <input
               class="connect__radio"
+              id="form-viber"
               type="radio"
               name="connect"
               value="viber"
