@@ -19,12 +19,12 @@ $(".header__contacts-burger").click(() => {
 // модальное окно
 $(".present__order-btn ").click(() => {
   $(".page__overlay_modal").fadeIn(400).css("display", "flex");
-  $("body").addClass('no-scroll');
+  $("body").addClass("no-scroll");
 });
 
 $(".modal__close ").click(() => {
   $(".page__overlay_modal").fadeOut(400);
-  $("body").removeClass('no-scroll');
+  $("body").removeClass("no-scroll");
 });
 
 $(".page__overlay").click((event) => {
@@ -35,46 +35,80 @@ $(".page__overlay").click((event) => {
 
 // маска
 const inputTel = document.querySelector(".callback__input_tel");
-const inputMask = new Inputmask('+375(99)999-99-99');
+const inputMask = new Inputmask("+375(99)999-99-99");
 
 inputMask.mask(inputTel);
 
 // валидация формы
+const inputPhone = document.querySelector(".callback__input_tel");
+const validator = new JustValidate(".modal__form");
 
-const form = document.querySelector('.modal__form');
-const formInputs = document.querySelectorAll('.callback__input');
-const inputPhone = document.querySelector('.callback__input_tel');
+const modalTitle = document.querySelector(".modal__title");
 
+// const modalForm = $(".modal__form");
+// const modalTitle = $(".modal__title");
 
-// function validatePhone(phone) {
-//     let re = /^[0-9\s]*$/;
-//     return re.test(String(phone));
-// }
+// modalForm.submit(function (event) {
+//   event.preventDefault();
+//   $.ajax({
+//     url: "https://jsonplaceholder.typicode.com/posts",
+//     type: "POST",
+//     data: $(this).serialize(),
+//     success(data) {
+//       modalTitle.text("Ваша заявка принята, номер заявки " + data.id);
+//       modalForm.slideUp(300);
+//     },
+//     error() {
+//       modalTitle.text("Что-то пошло не так, попробуйте позже!");
+//     },
+//   });
+// });
 
-// form.onsubmit = function () {
-//     let phoneVal = inputPhone.value,
-//         emptyInputs = Array.from(formInputs).filter(input => input.value === '');
-
-//     formInputs.forEach(function (input) {
-//         if (input.value === '') {
-//             input.classList.add('error');
-
-//         } else {
-//             input.classList.remove('error');
-//         }
-//     });
-
-//     if (emptyInputs.length !== 0) {
-//         console.log('inputs not filled');
-//         return false;
-//     } 
-
-//     if (!validatePhone(phoneVal)) {
-//         console.log('phone not valid');
-//         inputPhone.classList.add('error');
-//         return false;
-//     } else {
-//         inputPhone.classList.remove('error');
-//     }
-
-// }
+validator
+  .addField(".callback__input_name", [
+    {
+      rule: "required",
+      errorMessage: "Как вас зовут?",
+    },
+    {
+      rule: "minLength",
+      value: 3,
+      errorMessage: "Не короче 3 символов",
+    },
+    {
+      rule: "maxLength",
+      value: 40,
+      errorMessage: "Слишком длинное имя",
+    },
+  ])
+  .addField(".callback__input_tel", [
+    {
+      rule: "required",
+      errorMessage: "Укажите ваш телефон",
+    },
+    {
+      validator: (value) => {
+        const phone = inputPhone.inputmask.unmaskedvalue();
+        console.log(phone);
+        return !!(Number(phone) && phone.length === 9);
+      },
+      errorMessage: "Телефон не корректный!",
+    },
+  ])
+  .onSuccess((event) => {
+    const target = event.target;
+    axios
+      .post("https://jsonplaceholder.typicode.com/posts", {
+        name: target.name.value,
+        tel: inputTel.inputmask.unmaskedvalue(),
+        connect: target.connect.value,
+      })
+      .then((response) => {
+        modalTitle.textContent = `Спасибо ваша заявка принята, номер заявки ${response.data.id}!`;
+        target.reset();
+      })
+      .catch((err) => {
+        console.error(err);
+        modalTitle.textContent = "Что-то пошло не так, попробуйте позже!";
+      });
+  });
