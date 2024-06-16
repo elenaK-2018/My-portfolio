@@ -42,27 +42,7 @@ inputMask.mask(inputTel);
 // валидация формы
 const inputPhone = document.querySelector(".callback__input_tel");
 const validator = new JustValidate(".modal__form");
-
-const modalTitle = document.querySelector(".modal__title");
-
-// const modalForm = $(".modal__form");
-// const modalTitle = $(".modal__title");
-
-// modalForm.submit(function (event) {
-//   event.preventDefault();
-//   $.ajax({
-//     url: "https://jsonplaceholder.typicode.com/posts",
-//     type: "POST",
-//     data: $(this).serialize(),
-//     success(data) {
-//       modalTitle.text("Ваша заявка принята, номер заявки " + data.id);
-//       modalForm.slideUp(300);
-//     },
-//     error() {
-//       modalTitle.text("Что-то пошло не так, попробуйте позже!");
-//     },
-//   });
-// });
+const modalTitleElement = document.querySelector(".modal__title");
 
 validator
   .addField(".callback__input_name", [
@@ -96,19 +76,25 @@ validator
     },
   ])
   .onSuccess((event) => {
+    event.preventDefault(); 
     const target = event.target;
-    axios
-      .post("https://jsonplaceholder.typicode.com/posts", {
-        name: target.name.value,
-        tel: inputTel.inputmask.unmaskedvalue(),
-        connect: target.connect.value,
-      })
-      .then((response) => {
-        modalTitle.textContent = `Спасибо ваша заявка принята, номер заявки ${response.data.id}!`;
+    const formData = {
+      name: target.name.value,
+      tel: inputPhone.inputmask.unmaskedvalue(),
+      connect: target.connect.value,
+    };
+
+    $.ajax({
+      url: "https://jsonplaceholder.typicode.com/posts",
+      type: "POST",
+      data: formData,
+      success(response) {
+        modalTitleElement.textContent = `Спасибо, ваша заявка принята, номер заявки ${response.id}!`;
         target.reset();
-      })
-      .catch((err) => {
+      },
+      error(err) {
         console.error(err);
-        modalTitle.textContent = "Что-то пошло не так, попробуйте позже!";
-      });
+        modalTitleElement.textContent = "Что-то пошло не так, попробуйте позже!";
+      },
+    });
   });
