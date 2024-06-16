@@ -1,7 +1,17 @@
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   min-height: 100%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#37292f),
+    color-stop(#5d4b5f),
+    color-stop(#909373),
+    to(#4f455f)
+  );
+  background: -o-linear-gradient(top, #37292f, #5d4b5f, #909373, #4f455f);
   background: linear-gradient(180deg, #37292f, #5d4b5f, #909373, #4f455f);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
@@ -10,6 +20,7 @@ html {
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -23,6 +34,18 @@ body {
   overflow-x: hidden;
   min-width: 320px;
   height: 100%;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
 }
 
 @keyframes gradient {
@@ -90,6 +113,8 @@ section {
   background-color: rgba(0, 0, 0, 0.6);
   overflow: auto;
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   z-index: 10;
 }
@@ -155,6 +180,14 @@ legend {
   }
 
   .page {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(24.5%, var(--color-menu)),
+      color-stop(24.5%, transparent)
+    );
+    background-image: -o-linear-gradient(left, var(--color-menu) 24.5%, transparent 24.5%);
     background-image: linear-gradient(to right, var(--color-menu) 24.5%, transparent 24.5%);
   }
   .page__header {
@@ -164,6 +197,14 @@ legend {
 
 @media (min-width: 2700px) {
   .page {
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(30%, var(--color-menu)),
+      color-stop(30%, transparent)
+    );
+    background-image: -o-linear-gradient(left, var(--color-menu) 30%, transparent 30%);
     background-image: linear-gradient(to right, var(--color-menu) 30%, transparent 30%);
   }
 }

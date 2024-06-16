@@ -1,11 +1,13 @@
 .header {
-  background-color: var( --color-menu);
+  background-color: var(--color-menu);
   min-height: 76px;
   padding-top: 13px;
   padding-bottom: 13px;
 }
 
 .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,7 +20,7 @@
 .header__contacts {
   display: none;
   position: absolute;
-  background-color: var( --color-menu);
+  background-color: var(--color-menu);
   top: 77px;
   left: 0;
   right: 0;
@@ -44,6 +46,8 @@
 .contacts__link {
   font-size: 16px;
   line-height: 22px;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -57,6 +61,8 @@
 }
 
 .contacts__social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -74,6 +80,8 @@
   height: 26px;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
@@ -95,6 +103,7 @@
 
 .contacts__social-link:hover {
   transform: scale(0.8);
+  -webkit-box-shadow: 1px 1px 10px 5px;
   box-shadow: 1px 1px 10px 5px;
 }
 
@@ -107,8 +116,9 @@
 
 .header__contacts-burger:hover {
   transform: scale(1.2);
+  -webkit-box-shadow: 1px 1px 10px 5px rgb(247, 232, 234);
   box-shadow: 1px 1px 10px 5px rgb(247, 232, 234);
-  color: var( --color-menu);
+  color: var(--color-menu);
 }
 
 @media (min-width: 768px) {
